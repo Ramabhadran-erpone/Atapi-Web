@@ -1,0 +1,222 @@
+/* ==========================================================================
+   ATAPI Systems — Products and Services page
+   Builds on atapiindex.css (tokens, header, buttons, cards, footer).
+   ========================================================================== */
+
+.soft {
+    background: var(--soft);
+}
+
+.btn-w {
+    background: #fff;
+    color: #101d4a;
+}
+
+.btn-w:hover {
+    background: #eaf0fc;
+}
+
+/* Page intro */
+.products .hero {
+    padding: 72px 0 56px;
+}
+
+.products .hero h1 {
+    max-width: 14em;
+}
+
+.jump {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 34px;
+}
+
+.jump a {
+    padding: 10px 18px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--card);
+    font-weight: 600;
+    font-size: 0.92rem;
+    transition:
+        border-color 0.2s,
+        color 0.2s;
+}
+
+.jump a:hover {
+    border-color: var(--blue);
+    color: var(--blue-ink);
+}
+
+/* Core solutions: image and text, alternating sides */
+.rows {
+    padding: 40px 0 92px;
+}
+
+.prod {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 72px;
+    align-items: center;
+    padding: 56px 0;
+    border-top: 1px solid var(--line);
+}
+
+.prod:first-child {
+    border-top: 0;
+}
+
+.prod.rev .prod-img {
+    order: 2;
+}
+
+.prod-img {
+    position: relative;
+    display: grid;
+    place-items: center;
+    aspect-ratio: 4 / 3.2;
+    padding: 24px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    background: radial-gradient(circle, #fff, #eef2f9);
+    box-shadow: var(--sh);
+}
+
+.prod-img::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto;
+    height: 5px;
+    background: var(--grad);
+}
+
+.prod-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.prod-text h2 {
+    font-size: clamp(1.7rem, 3vw, 2.3rem);
+    margin-bottom: 14px;
+}
+
+.prod-text p {
+    max-width: 34em;
+}
+
+.prod-text .brands {
+    margin: 18px 0 20px;
+    padding: 0;
+    color: var(--ink);
+}
+
+/* Networking, security and mobility */
+.head.c h2 {
+    max-width: 700px;
+    margin-inline: auto;
+}
+
+.more-grid .brands a {
+    font-weight: 600;
+}
+
+/* Closing call to action */
+.cta-panel {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 40px;
+}
+
+.cta-panel h2 {
+    margin-bottom: 14px;
+}
+
+.cta-panel p {
+    max-width: 580px;
+}
+
+@media (max-width: 1000px) {
+    .prod {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding: 44px 0;
+    }
+
+    .prod.rev .prod-img {
+        order: 0;
+    }
+}
+
+@media (max-width: 700px) {
+    .cta-panel {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .cta-panel .btn {
+        width: 100%;
+    }
+}
+
+/* Brand panel: stands in for a product photo until one is available.
+   To use a photo instead, replace the .brand-panel contents with a single <img>. */
+.brand-panel {
+    gap: 28px;
+    align-content: center;
+    justify-items: center;
+}
+
+.bp-icon {
+    width: 64px;
+    height: 64px;
+    fill: none;
+    stroke: var(--blue-ink);
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.bp-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+}
+
+.bp-logos img {
+    width: auto;
+    height: auto;
+    max-width: 120px;
+    max-height: 40px;
+    padding: 10px 16px;
+    box-sizing: content-box;
+    border: 1px solid #e1e6ef;
+    border-radius: 12px;
+    background: #fff;
+    object-fit: contain;
+}
+
+@media (max-width: 360px) {
+    .jump a {
+        padding: 9px 14px;
+        font-size: 0.85rem;
+    }
+
+    .prod-img {
+        padding: 16px;
+    }
+
+    .bp-logos img {
+        max-width: 96px;
+        padding: 8px 12px;
+    }
+}
+
+@media (pointer: coarse) {
+    .jump a {
+        padding: 12px 18px;
+    }
+}

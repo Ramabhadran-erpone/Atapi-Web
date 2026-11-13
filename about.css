@@ -1,0 +1,236 @@
+/* ==========================================================================
+   ATAPI Systems — About page
+   Builds on atapiindex.css (tokens, header, buttons, cards, footer).
+   Only rules specific to the About page live here.
+   ========================================================================== */
+
+/* Current page in the navigation */
+.about #nav a[aria-current="page"] {
+    color: var(--blue-ink);
+}
+
+.soft {
+    background: var(--soft);
+}
+
+.head h2 {
+    max-width: 700px;
+}
+
+/* Company story */
+.story {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 80px;
+    align-items: start;
+}
+
+.story .copy {
+    display: grid;
+    gap: 18px;
+    justify-items: start;
+}
+
+.story .copy .lead {
+    margin: 0;
+}
+
+/* What we do: cards read as a plain list, so no extra bottom line */
+.about .card p {
+    font-size: 0.97rem;
+}
+
+/* Sectors with descriptions */
+.about .sec {
+    align-items: flex-start;
+    font-weight: 400;
+}
+
+.about .sec h3 {
+    font-size: 1.05rem;
+    margin-bottom: 4px;
+    color: var(--ink);
+}
+
+.about .sec p {
+    font-size: 0.92rem;
+    line-height: 1.55;
+}
+
+/* Brand chips */
+.brands {
+    padding: 64px 0;
+    background: var(--card);
+    border-block: 1px solid var(--line);
+}
+
+.brands-grid {
+    display: grid;
+    grid-template-columns: 0.75fr 1.25fr;
+    gap: 48px;
+    align-items: center;
+}
+
+.brands h2 {
+    font-size: clamp(1.7rem, 3vw, 2.3rem);
+    margin-bottom: 12px;
+}
+
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+}
+
+.chips li {
+    min-width: 84px;
+    padding: 10px 18px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 0.92rem;
+    color: var(--ink);
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+}
+
+/* Approach: the one real sequence on the page, so it is numbered */
+.band {
+    --band-bg: #101d4a;
+    background: var(--band-bg);
+    color: #fff;
+}
+
+[data-theme="dark"] .band {
+    --band-bg: #0e1730;
+}
+
+.band-head {
+    max-width: 720px;
+    margin-bottom: 56px;
+}
+
+.band h2 {
+    color: #fff;
+    margin-bottom: 16px;
+}
+
+.band p {
+    color: rgba(255, 255, 255, 0.78);
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+    list-style: none;
+}
+
+.steps li {
+    position: relative;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.steps .n {
+    position: absolute;
+    top: -14px;
+    left: 0;
+    padding-right: 12px;
+    background: var(--band-bg);
+    font:
+        500 1.35rem/1 Fraunces,
+        Georgia,
+        serif;
+    color: #b9ccff;
+}
+
+.steps .ico {
+    background: rgba(185, 204, 255, 0.12);
+    margin-top: 6px;
+}
+
+.steps .ico svg {
+    stroke: #b9ccff;
+}
+
+.steps h3 {
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.steps p {
+    font-size: 0.95rem;
+    max-width: 240px;
+}
+
+/* Closing call to action */
+.cta-panel {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 40px;
+}
+
+.cta-panel h2 {
+    margin-bottom: 14px;
+}
+
+.cta-panel p {
+    max-width: 580px;
+}
+
+.btn-w {
+    background: #fff;
+    color: #101d4a;
+}
+
+.btn-w:hover {
+    background: #eaf0fc;
+}
+
+@media (max-width: 1000px) {
+    .story,
+    .brands-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .steps {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 40px;
+    }
+}
+
+@media (max-width: 700px) {
+    .cta-panel {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .brands {
+        padding: 52px 0;
+    }
+}
+
+@media (max-width: 520px) {
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-panel .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 360px) {
+    .chips li {
+        min-width: 70px;
+        padding: 8px 12px;
+        font-size: 0.85rem;
+    }
+
+    .steps p {
+        max-width: none;
+    }
+}
