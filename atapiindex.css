@@ -165,7 +165,7 @@ footer .logo img {
 }
 #nav {
     display: flex;
-    gap: 30px;
+    gap: clamp(18px, 2.2vw, 30px);
     margin-left: auto;
 }
 #nav a {
@@ -1113,5 +1113,301 @@ footer a {
 
     .bar {
         min-height: 150px;
+    }
+}
+
+/* ==========================================================================
+   Footer social icons
+   Each icon shows its brand colour on hover and focus, with an off-white glyph.
+   ========================================================================== */
+
+.social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+    list-style: none;
+}
+
+.social a {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    margin: 0;
+    padding: 0;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    background: var(--card);
+    color: var(--ink);
+    transition:
+        background 0.2s,
+        border-color 0.2s,
+        color 0.2s,
+        transform 0.2s;
+}
+
+.social svg {
+    width: 25px;
+    height: 25px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.9;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.social a:hover,
+.social a:focus-visible {
+    color: #fafafa;
+    border-color: transparent;
+    transform: translateY(-2px);
+}
+
+.social .s-fb:hover,
+.social .s-fb:focus-visible {
+    background: #1877f2;
+}
+
+.social .s-ig:hover,
+.social .s-ig:focus-visible {
+    background: linear-gradient(45deg, #f9ce34, #ee2a7b 55%, #6228d7);
+}
+
+.social .s-wa:hover,
+.social .s-wa:focus-visible {
+    background: #25d366;
+}
+
+.social .s-yt:hover,
+.social .s-yt:focus-visible {
+    background: #ff0000;
+}
+
+.social .s-in:hover,
+.social .s-in:focus-visible {
+    background: #0a66c2;
+}
+
+@media (pointer: coarse) {
+    .social a {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* ==========================================================================
+   Enquiry form: required fields, email and phone side by side
+   ========================================================================== */
+
+.f-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.f-row label {
+    min-width: 0;
+}
+
+.lbl.req::after,
+.note .star {
+    color: #ff5c5c;
+    font-weight: 700;
+}
+
+.lbl.req::after {
+    content: " *";
+}
+
+select:required:invalid {
+    color: #6b7694;
+}
+
+input:user-invalid,
+select:user-invalid,
+textarea:user-invalid {
+    border-color: #ff9a9a;
+    box-shadow: 0 0 0 3px rgba(255, 120, 120, 0.35);
+}
+
+@media (max-width: 560px) {
+    .f-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Social icons: perfect circles */
+footer .social a {
+    flex: 0 0 auto;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+/* ==========================================================================
+   Offers: send visitors to the Facebook and Instagram pages
+   ========================================================================== */
+
+.offers {
+    padding: 0 0 92px;
+    scroll-margin-top: 20px;
+}
+
+.offers-panel {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 48px;
+    align-items: center;
+    padding: 52px;
+    overflow: hidden;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    box-shadow: var(--sh);
+}
+
+.offers-panel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 52px;
+    width: 90px;
+    height: 5px;
+    border-radius: 0 0 5px 5px;
+    background: var(--grad);
+}
+
+.offers h2 {
+    font-size: clamp(1.8rem, 3.2vw, 2.5rem);
+    margin-bottom: 14px;
+}
+
+.offers-note {
+    margin-top: 12px;
+    font-size: 0.92rem;
+}
+
+.offers-cards {
+    display: grid;
+    gap: 14px;
+}
+
+.offer-link {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px 16px 16px;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background: var(--bg);
+    transition:
+        border-color 0.2s,
+        transform 0.2s;
+}
+
+.offer-link:hover,
+.offer-link:focus-visible {
+    border-color: var(--blue);
+}
+
+.badge {
+    display: grid;
+    flex: 0 0 56px;
+    place-items: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    color: #fafafa;
+}
+
+.badge svg {
+    width: 28px;
+    height: 28px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.9;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.badge.fb {
+    background: #1877f2;
+}
+
+.badge.ig {
+    background: linear-gradient(45deg, #f9ce34, #ee2a7b 55%, #6228d7);
+}
+
+.offer-text b {
+    display: block;
+    color: var(--ink);
+    font-size: 1.1rem;
+}
+
+.offer-text small {
+    color: var(--mute);
+    font-size: 0.92rem;
+}
+
+.offer-link .go {
+    flex: 0 0 22px;
+    width: 22px;
+    height: 22px;
+    margin-left: auto;
+    fill: none;
+    stroke: var(--blue-ink);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: transform 0.2s;
+}
+
+@media (hover: hover) {
+    .offer-link:hover {
+        transform: translateY(-2px);
+    }
+
+    .offer-link:hover .go {
+        transform: translateX(4px);
+    }
+}
+
+@media (max-width: 1000px) {
+    .offers-panel {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding: 40px 32px;
+    }
+
+    .offers-panel::before {
+        left: 32px;
+    }
+}
+
+@media (max-width: 640px) {
+    .offers {
+        padding-bottom: 64px;
+    }
+
+    .offers-panel {
+        padding: 32px 20px;
+        border-radius: 18px;
+    }
+
+    .offers-panel::before {
+        left: 20px;
+    }
+
+    .offer-link {
+        gap: 12px;
+        padding: 14px;
+    }
+
+    .badge {
+        flex-basis: 50px;
+        width: 50px;
+        height: 50px;
     }
 }
