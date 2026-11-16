@@ -1,3 +1,4 @@
+
 :root {
     --bg: #f7f8fc;
     --soft: #ebf0f8;
@@ -820,36 +821,36 @@ footer a:hover {
         scroll-behavior: auto !important;
     }
 }
-
+ 
 @media (max-width: 520px) {
     .logo img {
         height: 50px;
     }
-
+ 
     footer .logo img {
         height: 58px;
     }
 }
-
+ 
 /* ==========================================================================
    Responsive refinements
    Foldable cover screens, tablets, small laptops, large monitors, landscape
    phones, touch devices and text safety.
    ========================================================================== */
-
+ 
 html {
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
 }
-
+ 
 :root {
     color-scheme: light;
 }
-
+ 
 [data-theme="dark"] {
     color-scheme: dark;
 }
-
+ 
 /* Long words, emails and addresses never force sideways scrolling */
 h1,
 h2,
@@ -858,269 +859,269 @@ p,
 a {
     overflow-wrap: break-word;
 }
-
+ 
 .ways a,
 footer a {
     overflow-wrap: anywhere;
 }
-
+ 
 /* Tablets in portrait, and unfolded foldables (about 600 to 1000px) */
 @media (min-width: 641px) and (max-width: 1000px) {
     .hero-grid {
         gap: 40px;
     }
-
+ 
     .stage {
         max-width: 640px;
         margin-inline: auto;
     }
 }
-
+ 
 /* Small laptops (about 1001 to 1180px) */
 @media (min-width: 1001px) and (max-width: 1180px) {
     .hero-grid {
         gap: 44px;
     }
-
+ 
     .why-grid {
         gap: 56px;
     }
-
+ 
     .panel {
         gap: 40px;
         padding: 48px;
     }
 }
-
+ 
 /* Compact phones and foldable cover screens (about 300 to 360px) */
 @media (max-width: 360px) {
     .wrap {
         width: calc(100% - 28px);
     }
-
+ 
     .bar {
         gap: 10px;
         min-height: 66px;
     }
-
+ 
     .logo img {
         height: 42px;
     }
-
+ 
     footer .logo img {
         height: 50px;
     }
-
+ 
     .acts {
         gap: 8px;
     }
-
+ 
     .ic {
         width: 40px;
         height: 40px;
     }
-
+ 
     h1 {
         font-size: 2rem;
     }
-
+ 
     h2 {
         font-size: 1.6rem;
     }
-
+ 
     .lead {
         font-size: 1.05rem;
     }
-
+ 
     .btn {
         padding: 0 16px;
     }
-
+ 
     .stat {
         padding: 22px 10px;
     }
-
+ 
     .card,
     .mini {
         padding-inline: 18px;
     }
-
+ 
     .logos {
         grid-template-columns: repeat(2, 1fr);
     }
-
+ 
     .panel {
         padding: 28px 18px;
     }
-
+ 
     .panel::before {
         left: 18px;
     }
 }
-
+ 
 /* Narrowest cover screens (below about 300px) */
 @media (max-width: 300px) {
     .logo img {
         height: 36px;
     }
-
+ 
     .acts {
         gap: 6px;
     }
-
+ 
     .stats {
         grid-template-columns: 1fr;
     }
-
+ 
     .stat,
     .stat:nth-child(3) {
         padding: 16px 0;
         border-left: 0;
         border-top: 1px solid var(--line);
     }
-
+ 
     .stat:first-child {
         border-top: 0;
     }
 }
-
+ 
 /* Landscape phones: a tall sticky header would take half the screen */
 @media (max-height: 520px) and (orientation: landscape) {
     header {
         position: relative;
     }
-
+ 
     html {
         scroll-padding-top: 0;
     }
-
+ 
     .hero {
         padding: 40px 0 48px;
     }
-
+ 
     section {
         padding: 56px 0;
     }
 }
-
+ 
 /* Touch screens: comfortable tap targets, no hover that sticks after a tap */
 @media (pointer: coarse) {
     .ic {
         width: 44px;
         height: 44px;
     }
-
+ 
     footer a {
         padding: 6px 0;
     }
-
+ 
     .dots button {
         width: 40px;
         height: 10px;
     }
 }
-
+ 
 @media (hover: none) {
     .card:hover,
     .btn:hover {
         transform: none;
     }
 }
-
+ 
 /* Large monitors: scale type and widen the page instead of leaving a narrow column */
 @media (min-width: 1600px) {
     html {
         font-size: 112.5%;
     }
-
+ 
     .wrap {
         width: min(1440px, 100% - 96px);
     }
-
+ 
     .logo img {
         height: 64px;
     }
-
+ 
     footer .logo img {
         height: 72px;
     }
 }
-
+ 
 @media (min-width: 1920px) {
     html {
         font-size: 125%;
     }
-
+ 
     .wrap {
         width: min(1600px, 100% - 120px);
     }
-
+ 
     .bar {
         min-height: 92px;
     }
-
+ 
     .logo img {
         height: 72px;
     }
-
+ 
     footer .logo img {
         height: 80px;
     }
-
+ 
     section {
         padding: 116px 0;
     }
 }
-
+ 
 @media (min-width: 2560px) {
     html {
         font-size: 162.5%;
     }
-
+ 
     .wrap {
         width: min(2000px, 100% - 160px);
     }
-
+ 
     .bar {
         min-height: 110px;
     }
-
+ 
     .logo img {
         height: 90px;
     }
-
+ 
     footer .logo img {
         height: 100px;
     }
 }
-
+ 
 @media (min-width: 3840px) {
     html {
         font-size: 250%;
     }
-
+ 
     .wrap {
         width: min(2800px, 100% - 240px);
     }
-
+ 
     .logo img {
         height: 130px;
     }
-
+ 
     footer .logo img {
         height: 150px;
     }
-
+ 
     .bar {
         min-height: 150px;
     }
 }
-
+ 
 /* ==========================================================================
    Footer social icons
    Each icon shows its brand colour on hover and focus, with an off-white glyph.
    ========================================================================== */
-
+ 
 .social {
     display: flex;
     flex-wrap: wrap;
@@ -1128,7 +1129,7 @@ footer a {
     margin-top: 20px;
     list-style: none;
 }
-
+ 
 .social a {
     display: grid;
     place-items: center;
@@ -1146,7 +1147,7 @@ footer a {
         color 0.2s,
         transform 0.2s;
 }
-
+ 
 .social svg {
     width: 25px;
     height: 25px;
@@ -1156,87 +1157,87 @@ footer a {
     stroke-linecap: round;
     stroke-linejoin: round;
 }
-
+ 
 .social a:hover,
 .social a:focus-visible {
     color: #fafafa;
     border-color: transparent;
     transform: translateY(-2px);
 }
-
+ 
 .social .s-fb:hover,
 .social .s-fb:focus-visible {
     background: #1877f2;
 }
-
+ 
 .social .s-ig:hover,
 .social .s-ig:focus-visible {
     background: linear-gradient(45deg, #f9ce34, #ee2a7b 55%, #6228d7);
 }
-
+ 
 .social .s-wa:hover,
 .social .s-wa:focus-visible {
     background: #25d366;
 }
-
+ 
 .social .s-yt:hover,
 .social .s-yt:focus-visible {
     background: #ff0000;
 }
-
+ 
 .social .s-in:hover,
 .social .s-in:focus-visible {
     background: #0a66c2;
 }
-
+ 
 @media (pointer: coarse) {
     .social a {
         width: 50px;
         height: 50px;
     }
 }
-
+ 
 /* ==========================================================================
    Enquiry form: required fields, email and phone side by side
    ========================================================================== */
-
+ 
 .f-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 14px;
 }
-
+ 
 .f-row label {
     min-width: 0;
 }
-
+ 
 .lbl.req::after,
 .note .star {
     color: #ff5c5c;
     font-weight: 700;
 }
-
+ 
 .lbl.req::after {
     content: " *";
 }
-
+ 
 select:required:invalid {
     color: #6b7694;
 }
-
+ 
 input:user-invalid,
 select:user-invalid,
 textarea:user-invalid {
     border-color: #ff9a9a;
     box-shadow: 0 0 0 3px rgba(255, 120, 120, 0.35);
 }
-
+ 
 @media (max-width: 560px) {
     .f-row {
         grid-template-columns: 1fr;
     }
 }
-
+ 
 /* Social icons: perfect circles */
 footer .social a {
     flex: 0 0 auto;
@@ -1244,16 +1245,16 @@ footer .social a {
     border-radius: 50%;
     overflow: hidden;
 }
-
+ 
 /* ==========================================================================
    Offers: send visitors to the Facebook and Instagram pages
    ========================================================================== */
-
+ 
 .offers {
     padding: 0 0 92px;
     scroll-margin-top: 20px;
 }
-
+ 
 .offers-panel {
     position: relative;
     display: grid;
@@ -1267,7 +1268,7 @@ footer .social a {
     border-radius: 24px;
     box-shadow: var(--sh);
 }
-
+ 
 .offers-panel::before {
     content: "";
     position: absolute;
@@ -1278,22 +1279,22 @@ footer .social a {
     border-radius: 0 0 5px 5px;
     background: var(--grad);
 }
-
+ 
 .offers h2 {
     font-size: clamp(1.8rem, 3.2vw, 2.5rem);
     margin-bottom: 14px;
 }
-
+ 
 .offers-note {
     margin-top: 12px;
     font-size: 0.92rem;
 }
-
+ 
 .offers-cards {
     display: grid;
     gap: 14px;
 }
-
+ 
 .offer-link {
     display: flex;
     align-items: center;
@@ -1306,12 +1307,12 @@ footer .social a {
         border-color 0.2s,
         transform 0.2s;
 }
-
+ 
 .offer-link:hover,
 .offer-link:focus-visible {
     border-color: var(--blue);
 }
-
+ 
 .badge {
     display: grid;
     flex: 0 0 56px;
@@ -1321,7 +1322,7 @@ footer .social a {
     border-radius: 50%;
     color: #fafafa;
 }
-
+ 
 .badge svg {
     width: 28px;
     height: 28px;
@@ -1331,26 +1332,26 @@ footer .social a {
     stroke-linecap: round;
     stroke-linejoin: round;
 }
-
-.badge.fb {
+ 
+.badge.b-fb {
     background: #1877f2;
 }
-
-.badge.ig {
+ 
+.badge.b-ig {
     background: linear-gradient(45deg, #f9ce34, #ee2a7b 55%, #6228d7);
 }
-
+ 
 .offer-text b {
     display: block;
     color: var(--ink);
     font-size: 1.1rem;
 }
-
+ 
 .offer-text small {
     color: var(--mute);
     font-size: 0.92rem;
 }
-
+ 
 .offer-link .go {
     flex: 0 0 22px;
     width: 22px;
@@ -1363,51 +1364,52 @@ footer .social a {
     stroke-linejoin: round;
     transition: transform 0.2s;
 }
-
+ 
 @media (hover: hover) {
     .offer-link:hover {
         transform: translateY(-2px);
     }
-
+ 
     .offer-link:hover .go {
         transform: translateX(4px);
     }
 }
-
+ 
 @media (max-width: 1000px) {
     .offers-panel {
         grid-template-columns: 1fr;
         gap: 28px;
         padding: 40px 32px;
     }
-
+ 
     .offers-panel::before {
         left: 32px;
     }
 }
-
+ 
 @media (max-width: 640px) {
     .offers {
         padding-bottom: 64px;
     }
-
+ 
     .offers-panel {
         padding: 32px 20px;
         border-radius: 18px;
     }
-
+ 
     .offers-panel::before {
         left: 20px;
     }
-
+ 
     .offer-link {
         gap: 12px;
         padding: 14px;
     }
-
+ 
     .badge {
         flex-basis: 50px;
         width: 50px;
         height: 50px;
     }
 }
+ 
